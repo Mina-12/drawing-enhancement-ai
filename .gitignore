@@ -1,0 +1,68 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Environment and local configuration
+.env
+.env.*
+*.local
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+/temp.png
+*.tmp
+*.bak
+
+# Generated model outputs and experiment artifacts
+outputs/
+outputs2/
+checkpoints/
+checkpoints2/
+checkpoints_cats/
+checkpoints_dogs/
+cat_tests/
+dog_tests/
+/before_vs_after*.png
+/enhanced*.png
+/face_grabcut.png
+/sketch.png
+
+# Local datasets and trained classical model state
+dataset/
+dogs_vs_cats/
+*.pickle
+*.pkl
+
+# Large model artifacts; publish via releases, external storage, or Git LFS
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+
+# Notebook checkpoints
+.ipynb_checkpoints/
