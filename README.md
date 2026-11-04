@@ -51,7 +51,7 @@ flowchart TD
     C --> D[Resize grayscale image to 50 x 50]
     D --> E[Classifier prediction: class 1 or class 2]
     E --> F[Select cat or dog generator checkpoint]
-    F --> G[Grayscale, resize to 256 x 256, normalize to [-1, 1]]
+    F --> G[Grayscale, resize to 256 x 256, normalize to range -1 to 1]
     G --> H[U-Net generator]
     H --> I[RGB enhancement]
     I --> J[Save enhanced.png and before_vs_after.png]
