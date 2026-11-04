@@ -9,7 +9,6 @@ __pycache__/
 htmlcov/
 
 # Virtual environments
-env/
 venv/
 .venv/
 ENV/
@@ -42,8 +41,6 @@ outputs/
 outputs2/
 checkpoints/
 checkpoints2/
-checkpoints_cats/
-checkpoints_dogs/
 cat_tests/
 dog_tests/
 /before_vs_after*.png
@@ -51,18 +48,34 @@ dog_tests/
 /face_grabcut.png
 /sketch.png
 
+# Local trained weights are required for inference but are not committed.
+# Keep these folders visible in `git status` so publishing requires an
+# explicit decision and documented distribution method (release/storage/LFS).
+checkpoints_cats/*
+checkpoints_dogs/*
+checkpoints2/
+
 # Local datasets and trained classical model state
 dataset/
 dogs_vs_cats/
 *.pickle
 *.pkl
 
-# Large model artifacts; publish via releases, external storage, or Git LFS
+# Other large model artifacts
 *.pt
 *.pth
 *.ckpt
 *.onnx
 *.h5
+
+# The exact GUI inference generators must be reviewed explicitly before publish.
+!checkpoints_cats/
+!checkpoints_cats/gen_epoch400.pth
+!checkpoints_dogs/
+!checkpoints_dogs/gen_epoch500.pth
+
+# Python caches and virtual environments (including the checked-out local env)
+__pycache__/
 
 # Notebook checkpoints
 .ipynb_checkpoints/
